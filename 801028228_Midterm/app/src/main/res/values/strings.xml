@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">801028228_Midterm</string>
+    <string name="buttonSearch">Search</string>
+    <string name="buttonReset">Reset</string>
+    <string name="sortby">Sort by:</string>
+    <string name="results">Search results</string>
+    <string name="price">Price</string>
+    <string name="date">Date</string>
+    <string name="hintEditText">Enter Keyword (Artist, Track, Lyrics, etc.)</string>
+    <string name="limit">Limit: 05</string>
+    <string name="track">Track:</string>
+    <string name="genre">Genre:</string>
+    <string name="artist">Artist:</string>
+    <string name="album">Album:</string>
+    <string name="trackPrice">Track Price:</string>
+    <string name="albumPrice">Album Price:</string>
+    <string name="buttonFinish">Finish</string>
+    <string name="displayPrice">Price:</string>
+    <string name="displayDate">Date:</string>
+    <string name="rbTrackRating">Track rating</string>
+    <string name="rbArtistRating">Artist rating</string>
 </resources>
