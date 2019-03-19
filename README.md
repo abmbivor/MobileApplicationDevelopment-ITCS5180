@@ -1,5 +1,8 @@
 # MobileApplicationDevelopment-ITCS5180
 
+Mid Term Exam 
+--------------
+Music Search MusixmatchAPI - Used to MusixmatchAPI to find and display music searches with details. For further details user is redirected to default browser
 
 Homeworks
 ----------
