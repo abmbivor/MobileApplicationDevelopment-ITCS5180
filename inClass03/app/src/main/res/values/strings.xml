@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Group14_InClass03</string>
+    <string name="displayNameHeader">Name:</string>
+    <string name="displayIDHeader">Student ID:</string>
+    <string name="displayDepartmentHeader">Department:</string>
+    <string name="displayEditButton">Edit</string>
+    <string name="profileAvatarHeader">My Avatar</string>
+    <string name="profileDepartmentHeader">Department:</string>
+    <string name="radioButton1">CS</string>
+    <string name="radioButton2">SIS</string>
+    <string name="radioButton3">BIO</string>
+    <string name="radioButton4">Other</string>
+    <string name="profileSaveButton">Save</string>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Group14_InClass07</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="addExpenseTitle">Add An Expense</string>
+    <string name="expenseName">Expense Name</string>
+    <string name="addExpenseCategory">Category</string>
+    <string name="addExpenseSelectCategory">Select Category</string>
+    <string name="addExpenseAmount">Amount</string>
+    <string name="addExpenseButton1">Add Expense</string>
+    <string name="addExpenseButton2">Cancel</string>
+    <string name="strExpenseDetails">Expense Details</string>
+    <string name="strName">Name:</string>
+    <string name="strCategory">Category:</string>
+    <string name="strAmount">Amount:</string>
+    <string name="strDate">Date:</string>
+    <string name="strClose">Close</string>
+    <string name="expenseAppCurrentExpenses">Current Expenses:</string>
+    <string name="expenseButton1">Add</string>
+    <string name="ExpenseMessage">There is no expense to show, Please add your expenses from the menu.</string>
+</resources>

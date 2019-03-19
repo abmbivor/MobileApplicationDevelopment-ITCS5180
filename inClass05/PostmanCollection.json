@@ -1,0 +1,65 @@
+{
+	"info": {
+		"name": "In Class 05",
+		"_postman_id": "121618a9-e0d0-1ee8-0ae3-853191bd32cb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Keywords",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://dev.theappsdr.com/apis/photos/keywords.php",
+					"protocol": "http",
+					"host": [
+						"dev",
+						"theappsdr",
+						"com"
+					],
+					"path": [
+						"apis",
+						"photos",
+						"keywords.php"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get URLs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://dev.theappsdr.com/apis/photos/index.php?keyword=android",
+					"protocol": "http",
+					"host": [
+						"dev",
+						"theappsdr",
+						"com"
+					],
+					"path": [
+						"apis",
+						"photos",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "android",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

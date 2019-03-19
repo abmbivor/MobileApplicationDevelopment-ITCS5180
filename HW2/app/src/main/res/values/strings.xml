@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GROUP14_HW02</string>
+    <string name="threadHeading">For Thread:</string>
+    <string name="selectPasswordCount">Select Password Count:</string>
+    <string name="SelectPasswordLength">Select Password Length:</string>
+    <string name="ForAsyncTaskHeading">For AsyncTask:</string>
+    <string name="ButtonGenerate">Generate</string>
+    <string name="threadGeneratedHeading">Passwords generated using Thread:</string>
+    <string name="asyncTaskGeneratedHeading">Passwords generated using AsyncTask:</string>
+    <string name="buttonFinish">Finish</string>
+    <string name="countDefault">1</string>
+    <string name="lengthDefault">7</string>
+    <string name="progressBarDefault">0 %</string>
+</resources>

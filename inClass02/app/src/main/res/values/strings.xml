@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Group14_InClass02</string>
+    <string name="MainHeading">
+        <u>Body Mass Index (BMI)</u>
+    </string>
+    <string name="Weight">Weight</string>
+    <string name="WeightUnit">lb</string>
+    <string name="Height">Height</string>
+    <string name="HeighUnit1">feet</string>
+    <string name="HeightUnit2">inches</string>
+    <string name="Button">Calculate BMI</string>
+    <string name="BMIHeading">Your BMI:</string>
+    <string name="WeightStatus">You are</string>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GROUP14_HW1</string>
+    <string name="weightHeader">Weight (lbs)</string>
+    <string name="weightHint">Enter Weight</string>
+    <string name="GenderHeader">Gender</string>
+    <string name="toggleMale">M</string>
+    <string name="toggleFemale">F</string>
+    <string name="buttonSave">Save</string>
+    <string name="DrinkSizeHeader">Drink Size</string>
+    <string name="radioButton1">1 oz</string>
+    <string name="radioButton2">5 oz</string>
+    <string name="radioButton3">12 oz</string>
+    <string name="alcoholHeader">Alcohol %</string>
+    <string name="initialAlcohol">5 %</string>
+    <string name="BACLevelHeader">BAC Level:</string>
+    <string name="yourStatusHeader">Your Status:</string>
+    <string name="baclevelBaseValue">0.0</string>
+    <string name="statusDefault">You\'re safe</string>
+    <string name="buttonAddDrink">Add Drink</string>
+    <string name="buttonReset">Reset</string>
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GROUP14_HW03</string>
+    <string name="buttonSearch">Search</string>
+    <string name="buttonReset">Reset</string>
+    <string name="sortby">Sort by:</string>
+    <string name="results">Results</string>
+    <string name="price">Price</string>
+    <string name="date">Date</string>
+    <string name="hintEditText">Enter Keyword (Artist, Track, etc.)</string>
+    <string name="limit">Limit: 10</string>
+    <string name="track">Track:</string>
+    <string name="genre">Genre:</string>
+    <string name="artist">Artist:</string>
+    <string name="album">Album:</string>
+    <string name="trackPrice">Track Price:</string>
+    <string name="albumPrice">Album Price:</string>
+    <string name="buttonFinish">Finish</string>
+    <string name="displayPrice">Price:</string>
+    <string name="displayDate">Date:</string>
+</resources>

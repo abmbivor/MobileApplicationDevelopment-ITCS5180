@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Group14_InClass04</string>
+    <string name="buttonAsync">AsyncTask</string>
+    <string name="buttonThread">Thread</string>
+</resources>
