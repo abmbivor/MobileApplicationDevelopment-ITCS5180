@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HW04_Group14</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="DishTitle">Dish</string>
+    <string name="addIngredient">Add Ingredients</string>
+    <string name="buttonSearch">Search</string>
+    <string name="buttonFinish">Finish</string>
+    <string name="RecipeTitleHeader">Title:</string>
+    <string name="ingredientsHeader">Ingredients:</string>
+    <string name="URLheader">URL:</string>
+    <string name="loading">Loading...</string>
+</resources>
