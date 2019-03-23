@@ -2,7 +2,7 @@
 
 Mid Term Exam 
 --------------
-Music Search MusixmatchAPI - Used to MusixmatchAPI to find and display music searches with details. For further details user is redirected to default browser
+Music Search MusixmatchAPI - Used MusixmatchAPI to find and display music searches with details. For further details user is redirected to default browser
 
 Homeworks
 ----------
