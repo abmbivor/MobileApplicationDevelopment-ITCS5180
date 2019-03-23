@@ -12,6 +12,7 @@ Homeworks
 
 03 - Music Search Application using iTunes API
 
+04 - RecipePuppy Recipe Finder App - The App displays recipes from Recipe Puppy (http://www.recipepuppy.com/). This allows you to search the recipes of the dish you are interested in, with proper ingredients.
 
 In Class Assignments
 ---------------------
