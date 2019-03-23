@@ -98,7 +98,7 @@ public class SearchFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if(editTextDishTitle.getText().toString().isEmpty())editTextDishTitle.setError("Enter Dish Name");
+                if(editTextDishTitle.getText().toString().trim().isEmpty())editTextDishTitle.setError("Enter Dish Name");
                 else {
                     disableAll();
                     getActivity().setTitle("Recipes");
