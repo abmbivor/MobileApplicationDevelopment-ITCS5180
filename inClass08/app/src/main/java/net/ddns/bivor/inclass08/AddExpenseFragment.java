@@ -66,11 +66,11 @@ public class AddExpenseFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         getActivity().setTitle("Add Expense");
-        editTextAddExpenseName = getActivity().findViewById(R.id.editTextAddExpenseName);
-        editTextAddExpenseAmount = getActivity().findViewById(R.id.editTextAddExpenseAmount);
-        textViewCategory = getActivity().findViewById(R.id.textViewAddExpenseSelectCategory);
+        editTextAddExpenseName = getActivity().findViewById(R.id.editTextEditExpenseName);
+        editTextAddExpenseAmount = getActivity().findViewById(R.id.editTextEditExpenseAmount);
+        textViewCategory = getActivity().findViewById(R.id.textViewEditExpenseSelectCategory);
 
-        getActivity().findViewById(R.id.textViewAddExpenseSelectCategory).setOnClickListener(new View.OnClickListener() {
+        getActivity().findViewById(R.id.textViewEditExpenseSelectCategory).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -94,7 +94,7 @@ public class AddExpenseFragment extends Fragment {
             }
         });
 
-        getActivity().findViewById(R.id.buttonAddExpense).setOnClickListener(new View.OnClickListener() {
+        getActivity().findViewById(R.id.buttonEditExpense).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(editTextAddExpenseName.getText().toString().isEmpty()){
