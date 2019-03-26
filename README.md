@@ -29,3 +29,5 @@ In Class Assignments
 
 07 - Expense App - To add and display expenses using Fragments
 
+08 - Expense App - To add, display and edit expenses using Fragments and Firebase
+
