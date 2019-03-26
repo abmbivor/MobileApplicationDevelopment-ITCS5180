@@ -1,65 +1,159 @@
 package net.ddns.bivor.inclass08;
 
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link EditExpenseFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class EditExpenseFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    ArrayList<String> category;
+
+    Expense expense;
+    EditText editTextEditExpenseName, editTextEditExpenseAmount;
+    TextView textViewEditExpenseSelectCategory;
+    Button buttonEditSave, buttonEditCancel;
+    private EditExpenseListener mListener;
+    int index;
 
 
     public EditExpenseFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment EditExpenseFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static EditExpenseFragment newInstance(String param1, String param2) {
-        EditExpenseFragment fragment = new EditExpenseFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public EditExpenseFragment(Expense expense, int index) {
+        this.expense = expense;
+        this.index = index;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        category = new ArrayList<>(Arrays.asList("Groceries","Invoice","Transportation","Shopping", "Rent", "Trips",
+                "Utilities","Other"));
+
+        View rootView = inflater.inflate(R.layout.fragment_edit_expense, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_edit_expense, container, false);
+
+
+
+
+
+        return rootView;
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof EditExpenseFragment.EditExpenseListener) {
+            mListener = (EditExpenseFragment.EditExpenseListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement EditExpenseListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        getActivity().setTitle("Edit Expense");
+
+        editTextEditExpenseName = getActivity().findViewById(R.id.editTextEditExpenseName);
+        editTextEditExpenseAmount = getActivity().findViewById(R.id.editTextEditExpenseAmount);
+        textViewEditExpenseSelectCategory = getActivity().findViewById(R.id.textViewEditExpenseSelectCategory);
+
+        editTextEditExpenseName.setText(expense.name);
+        editTextEditExpenseAmount.setText(expense.amount);
+        textViewEditExpenseSelectCategory.setText(expense.category);
+
+        getActivity().findViewById(R.id.textViewEditExpenseSelectCategory).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+                builder.setTitle("Choose a Keyword")
+                        .setItems(category.toArray(new CharSequence[category.size()]), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                textViewEditExpenseSelectCategory.setText(category.get(which));
+                            }
+                        });
+                final AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        getActivity().findViewById(R.id.buttonEditCancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.goToShowFromEditOnCancel();
+            }
+        });
+
+        getActivity().findViewById(R.id.buttonEditSave).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(editTextEditExpenseName.getText().toString().isEmpty()){
+                    editTextEditExpenseName.setError("Enter Expense Name");
+                    Toast.makeText(getActivity(), "Enter Expense Name", Toast.LENGTH_SHORT).show();
+                }
+                else if(editTextEditExpenseAmount.getText().toString().isEmpty()){
+                    editTextEditExpenseAmount.setError("Enter Expense Name");
+                    Toast.makeText(getActivity(), "Enter Expense Amount", Toast.LENGTH_SHORT).show();
+                }
+                else if (textViewEditExpenseSelectCategory.getText().toString().equals("Select Category")){
+                    Toast.makeText(getActivity(), "Select a Category", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    expense.name = editTextEditExpenseName.getText().toString();
+                    expense.amount = editTextEditExpenseAmount.getText().toString();
+                    expense.category = textViewEditExpenseSelectCategory.getText().toString();
+                    expense.date = new Date();
+
+                    DatabaseReference mDatabase;
+                    mDatabase = FirebaseDatabase.getInstance().getReference();
+                    mDatabase.child("expenses").child(""+index).setValue(expense);
+
+                    mListener.goToExpenseFromEditOnSave();
+
+                }
+            }
+        });
+
+    }
+
+
+    public interface EditExpenseListener{
+        void goToShowFromEditOnCancel();
+        void goToExpenseFromEditOnSave();
+    }
 }

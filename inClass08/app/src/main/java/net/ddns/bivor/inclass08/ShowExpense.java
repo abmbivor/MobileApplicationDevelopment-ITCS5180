@@ -27,6 +27,7 @@ public class ShowExpense extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     Expense expense;
+    int index;
 
     private OnFragmentInteractionListener mListener;
 
@@ -48,6 +49,7 @@ public class ShowExpense extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             expense = (Expense) getArguments().getSerializable("EXPENSE_KEY");
+            index = (Integer) getArguments().getInt("INDEX_KEY");
         }
     }
 
@@ -92,6 +94,13 @@ public class ShowExpense extends Fragment {
                 mListener.goToExpenseFromShow();
             }
         });
+
+        getActivity().findViewById(R.id.buttonEdit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.goToEditExpenseFromShow(expense, index);
+            }
+        });
     }
 
     @Override
@@ -113,5 +122,6 @@ public class ShowExpense extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void goToExpenseFromShow();
+        void goToEditExpenseFromShow(Expense expense, int index);
     }
 }

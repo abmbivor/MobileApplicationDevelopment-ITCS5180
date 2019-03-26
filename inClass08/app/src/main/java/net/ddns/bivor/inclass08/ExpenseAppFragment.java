@@ -2,6 +2,7 @@ package net.ddns.bivor.inclass08;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,6 +12,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 /**
@@ -22,7 +30,7 @@ import android.view.ViewGroup;
 public class ExpenseAppFragment extends Fragment {
 
     public OnFragmentInteractionListener mListener;
-
+    private DatabaseReference mDatabase;
     RecyclerView recyclerView;
     RecyclerView.Adapter mAdapter;
     //RecyclerView.LayoutManager layoutManager;
@@ -100,10 +108,11 @@ public class ExpenseAppFragment extends Fragment {
     }
     FragmentCommunication communication=new FragmentCommunication() {
         @Override
-        public void respond(Expense expense) {
+        public void respond(Expense expense, int index) {
             ShowExpense showExpense=new ShowExpense();
             Bundle bundle=new Bundle();
             bundle.putSerializable("EXPENSE_KEY",expense);
+            bundle.putInt("INDEX_KEY", index);
             showExpense.setArguments(bundle);
             FragmentManager manager=getFragmentManager();
             FragmentTransaction transaction=manager.beginTransaction();

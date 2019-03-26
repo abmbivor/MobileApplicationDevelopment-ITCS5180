@@ -37,7 +37,7 @@ public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ViewHold
         viewHolder.textViewItemCost.setText("$"+ expense.amount);
         viewHolder.expense = expense;
         viewHolder.expenses = mData;
-        Bundle bundle = new Bundle();
+        viewHolder.selectedIndex = i;
 
     }
 
@@ -50,6 +50,7 @@ public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ViewHold
 
         TextView textViewExpenseItem, textViewItemCost;
         Expense expense;
+        int selectedIndex;
         ArrayList<Expense> expenses;
         FragmentCommunication mCommunication;
 
@@ -62,21 +63,21 @@ public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ViewHold
             mCommunication = Communicator;
 
             itemView.setOnClickListener(this);
-            itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    mCommunication.delete(expense);
-                    Toast.makeText(itemView.getContext(), "Expense Deleted", Toast.LENGTH_SHORT).show();
-                    return false;
-                }
-            });
+//            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+//                @Override
+//                public boolean onLongClick(View v) {
+//                    mCommunication.delete(expense);
+//                    Toast.makeText(itemView.getContext(), "Expense Deleted", Toast.LENGTH_SHORT).show();
+//                    return false;
+//                }
+//            });
 
 
         }
 
         @Override
         public void onClick(View v) {
-            mCommunication.respond(expense);
+            mCommunication.respond(expense, selectedIndex);
         }
 
     }
