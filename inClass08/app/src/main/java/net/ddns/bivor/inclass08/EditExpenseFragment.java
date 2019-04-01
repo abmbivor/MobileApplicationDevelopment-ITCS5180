@@ -65,6 +65,8 @@ public class EditExpenseFragment extends Fragment {
         return rootView;
     }
 
+
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -150,6 +152,7 @@ public class EditExpenseFragment extends Fragment {
         });
 
     }
+
 
 
     public interface EditExpenseListener{

@@ -65,7 +65,7 @@ public class AddExpenseFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        getActivity().setTitle("Add Expense");
+        //getActivity().setTitle("Add Expense");
         editTextAddExpenseName = getActivity().findViewById(R.id.editTextAddExpenseName);
         editTextAddExpenseAmount = getActivity().findViewById(R.id.editTextAddExpenseAmount);
         textViewCategory = getActivity().findViewById(R.id.textViewAddExpenseSelectCategory);

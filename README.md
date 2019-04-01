@@ -14,6 +14,8 @@ Homeworks
 
 04 - RecipePuppy Recipe Finder App - The App displays recipes from Recipe Puppy (http://www.recipepuppy.com/). This allows you to search the recipes of the dish you are interested in, with proper ingredients.
 
+05 - Expense Manager Application - To add, display and edit expenses using Fragments and Firebase; using RecyclerView, Firebase, Date Picker, and several System apps, such as Camera and Gallery.
+
 In Class Assignments
 ---------------------
 
