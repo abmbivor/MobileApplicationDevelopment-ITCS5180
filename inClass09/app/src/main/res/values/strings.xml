@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">InClass09_Group14</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buttonCreateContact">Create New Contact</string>
+    <string name="buttonSubmit">Submit</string>
+    <string name="strEmail">Email</string>
+    <string name="strPassword">Password</string>
+    <string name="strLogIn">Log In</string>
+    <string name="strSignUp">Sign Up</string>
+    <string name="strFirstName">First Name</string>
+    <string name="strLastName">Last Name</string>
+    <string name="strConfirmPassword">Confirm Password</string>
+    <string name="strCancel">Cancel</string>
+    <string name="hintName">Name</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintPhone">Phone</string>
+</resources>
