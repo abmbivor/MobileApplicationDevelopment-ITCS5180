@@ -16,6 +16,8 @@ Homeworks
 
 05 - Expense Manager Application - To add, display and edit expenses using Fragments and Firebase; using RecyclerView, Firebase, Date Picker, and several System apps, such as Camera and Gallery.
 
+06 - ChatRoom - uses Firebase realtime database and storage features along with authentication.
+
 In Class Assignments
 ---------------------
 
