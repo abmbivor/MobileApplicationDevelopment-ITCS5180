@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Group14_IC10</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buttonLogin">Login</string>
+    <string name="buttonSignUp">Sign up</string>
+    <string name="hintPassword">Password</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintFirstName">First Name</string>
+    <string name="hintLastName">Last Name</string>
+    <string name="hintChoosePassword">Choose Password</string>
+    <string name="hintRepeatPassword">Repeat Password</string>
+    <string name="hintType">Type message to send...</string>
+    <string name="buttonAddNote">Add Note</string>
+    <string name="buttonPostNote">Post Note</string>
+    <string name="buttonClose">Close</string>
+</resources>
