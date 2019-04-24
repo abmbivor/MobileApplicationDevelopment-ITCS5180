@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Group14_InClass12</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hintTripName">Trip Name</string>
+    <string name="hintDest">Destination City</string>
+    <string name="dateSelect">Select a Date</string>
+    <string name="buttonClose">Close</string>
+</resources>

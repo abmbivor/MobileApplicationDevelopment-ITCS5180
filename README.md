@@ -40,3 +40,5 @@ In Class Assignments
 10 - Note Manager - Using OkHTTP library to implement a simple note taker application, which uses an API hosted remotely. Used the API to sign up, login, save new notes, get notes, delete the notes, and so on. Used the Shared Preferences to save the web token locally, and manage the session.
 
 11 - In this assignment Google Maps was interfaced into the app, and poly lines and markers were included in the app.
+
+12 - Trip Planar App using Google Maps, Fragments, OkHttp, Firebase
